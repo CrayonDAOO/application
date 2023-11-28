@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gig Attributes</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body class="bg-black text-white">
+        <main class="flex flex-col px-3">
+            <!-- Page Heading-->
+            <div class="flex gap-3 items-center mb-4 mt-3">
+                <button onclick="history.back()" class="mr-1 mt-1"><svg class="fill-green" xmlns="http://www.w3.org/2000/svg" height="1.25em" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M25.4 278.6L2.7 256l22.6-22.6 144-144L192 66.7 237.2 112l-22.6 22.6L125.2 224 416 224l32 0 0 64-32 0-290.7 0 89.4 89.4L237.2 400 192 445.3l-22.6-22.6-144-144z"/></svg></button>
+                <h2 class="text-3xl font-medium mt-1">Create Gig</h2>
+            </div>
+            <!-- Section Header -->
+            <div class="flex gap-3 items-center mb-3">
+                <div class="mr-1"><svg class="fill-green" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M347.8 17C319.3 6 288.4 0 256 0C114.6 0 0 114.6 0 256S114.6 512 256 512c17.7 0 32-14.3 32-32s-14.3-32-32-32C150 448 64 362 64 256S150 64 256 64c14.1 0 27.8 1.5 41 4.4L347.8 17zM310.6 349.4c-5.4 5.3-11.4 9.8-17.8 13.6c-1.7 2.7-3 5.7-3.8 9c-4.4 17.1 5.9 34.6 23 39c12.8 3.3 26.2 5 40 5c88.4 0 160-71.6 160-160c0-32.2-5.9-63-16.8-91.3l-51.4 51.4c2.7 12.9 4.2 26.2 4.2 39.9c0 53-43 96-96 96c-8.3 0-16.4-1.1-24-3c-5.9-1.5-11.9-1.3-17.4 .4zM473.9 16c-18.8-18.8-49.2-18.7-67.9 0L366.4 55.7l89.3 89.3 39.8-38.9c19.1-18.7 19.2-49.4 .4-68.2L473.9 16zM200.5 221.8c-7 7-12.3 15.6-15.4 25l-23.8 71.3c-2.9 8.6-.6 18.1 5.8 24.6s15.9 8.7 24.6 5.8l71.5-23.9c9.2-3.1 17.6-8.2 24.5-15L432.8 167.5 343.7 78.4 200.5 221.8z"/></svg></div>
+                <div class="flex flex-col">
+                    <h2 class="text-2xl font-medium mt-1">Add Attributes</h2>
+                </div>
+            </div>
+            <div class="py-2">   
+                <p class="text-light-gray">Textual traits that appear on your artwork's page</p>
+            </div>
+            <form> 
+                <div class="mb-1 pt-2">
+                    <div class="flex flex-col gap-3">
+                        <label for="attributes" class="block mb-2 text-md font-medium">Attributes</label>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <input type="text" id="attributes" class="bg-dark-gray border border-gray text-light-gray text-sm rounded-lg focus:ring-green focus:border-green block w-full p-2.5" placeholder="Attribute" required>
+                    </div>
+                    <div class="flex flex-col gap-3 hidden">
+                        <input type="text" id="attributes" class="bg-dark-gray border border-gray text-light-gray text-sm rounded-lg focus:ring-green focus:border-green block w-full p-2.5" placeholder="Attribute" required>
+                    </div>
+                    <button class="text-sm font-bold flex gap-2 items-center mt-3" id="add-attribute-button">
+                        <svg class="fill-green" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+                            <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg>
+                        Add another attribute
+                    </button>
+                </div>                                  
+            </form>
+            <div class="py-2">
+                <p class="font-bold text-md py-1">Lock from future changes</p>
+                <p class="text-light-gray">Prevent this piece from ever being changed. <span class="text-red">This is permanent.</span></p>
+                <!-- Lock Artwork -->
+                <div class="mb-1 mt-3">
+                    <label class="relative inline-flex items-center cursor-pointer">
+                        <input type="checkbox" value="" class="sr-only peer">
+                        <div class="w-11 h-6 bg-gray peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-green dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                        <span class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">Lock Artwork</span>
+                    </label>  
+                </div>
+                <!-- Buttons -->
+                <section class="flex w-full gap-2 py-4">
+                    <button type="button" onclick="history.back()" class="text-white bg-stone-900 w-full rounded border border-green hover:bg-gray focus:ring-4 focus:ring-green font-medium rounded-xl text-sm px-5 py-2.5 focus:outline-none dark:focus:ring-blue-800">Back</button>
+                    <button type="button" onclick= "window.location.href='gig.html';" class="py-2.5 px-5 w-full text-sm font-medium text-black focus:outline-none bg-gradient-to-b from-green to-teal hover:bg-gradient-to-r from-green to-teal rounded-xl focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700">Preview</button>
+                </section>
+            </div>
+        </main>
+        <script>
+            // Function to add a new attribute input field above the button
+            function addAttributeField() {
+                // Create a new input element
+                var input = document.createElement("input");
+                input.type = "text";
+                input.className = "bg-dark-gray border border-gray mb-3 text-light-gray text-sm rounded-lg focus:ring-green focus:border-green block w-full p-2.5";
+                input.placeholder = "Attribute";
+                input.required = true;
+
+                // Insert the new input field above the button
+                var button = document.getElementById('add-attribute-button');
+                button.parentNode.insertBefore(input, button);
+            }
+
+            // Event listener for the "Add another attribute" button
+            document.getElementById('add-attribute-button').addEventListener('click', function() {
+                addAttributeField();
+            });
+
+            // Function to replace the form field with the entered text
+            document.querySelector('form').addEventListener('input', function(event) {
+                if (event.target.tagName === 'INPUT') {
+                    event.target.addEventListener('change', function() {
+                        event.target.outerHTML = '<p>' + event.target.value + '</p>';
+                    });
+                }
+            });
+        </script>
+    </body>
+</html>

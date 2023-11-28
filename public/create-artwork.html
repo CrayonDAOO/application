@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Artwork</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+    <body class="bg-black text-white">
+        <main class="flex flex-col px-3">
+            <!-- Page Heading-->
+            <div class="flex gap-3 items-center mb-4 mt-3">
+                <button onclick="history.back()" class="mr-1 mt-1"><svg class="fill-green" xmlns="http://www.w3.org/2000/svg" height="1.25em" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M25.4 278.6L2.7 256l22.6-22.6 144-144L192 66.7 237.2 112l-22.6 22.6L125.2 224 416 224l32 0 0 64-32 0-290.7 0 89.4 89.4L237.2 400 192 445.3l-22.6-22.6-144-144z"/></svg></button>
+                <h2 class="text-3xl font-medium mt-1">Create Artwork</h2>
+            </div>
+            <!-- Form Tabs -->
+            <section class="flex flex-col">
+                <!-- Supply Type -->
+                <div class="flex gap-3 items-center mb-3">
+                    <div class="mr-1"><svg class="fill-green" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M362.7 19.3L314.3 67.7 444.3 197.7l48.4-48.4c25-25 25-65.5 0-90.5L453.3 19.3c-25-25-65.5-25-90.5 0zm-71 71L58.6 323.5c-10.4 10.4-18 23.3-22.2 37.4L1 481.2C-1.5 489.7 .8 498.8 7 505s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L421.7 220.3 291.7 90.3z"/></svg></div>
+                    <h2 class="text-2xl font-medium mt-1">Supply Type</h2>
+                </div>
+                <!-- Interactive Tab Test -->
+                <div class="mb-4 flex flex-col">
+                    <ul class="flex flex-row justify-start gap-2 text-sm font-medium" id="default-tab" data-tabs-toggle="#default-tab-content" role="tablist">
+                        <li class="text-left w-full" role="presentation">
+                            <button class="py-3 px-2 w-full rounded-xl text-white border-2 border-gray bg-dark-gray hover:bg-gray focus:bg-gradient-to-b from-green to-teal focus:text-black" id="auction-tab" data-tabs-target="#auction" type="button" role="tab" aria-controls="auction" aria-selected="false">
+                                <h4 class="text-xs font-bold uppercase">Single Edition</h4>
+                                <p class="text-xs pt-1 leading-tight">There can only be one</p>
+                            </button>
+                        </li>
+                        <li class="text-left w-full" role="presentation">
+                            <button class="py-3 px-2 w-full rounded-xl text-white border-2 border-gray bg-dark-gray hover:bg-gray hover:text-white focus:bg-gradient-to-b from-green to-teal focus:text-black" id="editions-tab" data-tabs-target="#editions" type="button" role="tab" aria-controls="editions" aria-selected="false">
+                                <h4 class="text-xs font-bold uppercase">Limited Edition</h4>
+                                <p class="text-xs pt-1 leading-tight">Set a limited supply</p>
+                            </button>
+                        </li>
+                        <li class="text-left w-full" role="presentation">
+                            <button class="py-3 px-2 w-full rounded-xl text-white border-2 border-gray bg-dark-gray hover:bg-gray hover:text-white focus:bg-gradient-to-b from-green to-teal focus:text-black" id="open-edition-tab" data-tabs-target="#open-edition" type="button" role="tab" aria-controls="open-edition" aria-selected="false">
+                                <h4 class="text-xs font-bold uppercase">Open Edition</h4>
+                                <p class="text-xs pt-1 leading-tight">The market decides</p>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <div id="default-tab-content max-w-lg">
+                    <!-- Auction -->
+                    <div class="hidden rounded-lg" id="auction" role="tabpanel" aria-labelledby="auction-tab">
+                        <form>
+                            <!-- Reserve Price -->
+                            <div class="mb-1">
+                                <label for="price" class="block text-md font-medium leading-6 text-light-gray">Reserve Price</label>
+                                <div class="relative mt-2 rounded-lg border bg-dark-gray border-gray overflow-hidden shadow-sm">
+                                <input type="text" name="price" id="price" class="block bg-dark-gray w-full rounded-lg border-0 py-2.5 pl-3 left-3 text-gray-900 ring-1 ring-inset ring-gray placeholder:text-gray focus:ring-2 focus:ring-inset focus:ring-green sm:text-sm sm:leading-6" placeholder="0.00">
+                                <div class="absolute inset-y-0 right-2 top-0 flex items-center text-gray-400">
+                                    <select id="currency" name="currency" class="h-full rounded-xl border-0 bg-dark-gray px-2 py-.5 text-gray-500 focus:ring-2 focus:ring-inset focus:ring-green sm:text-sm">
+                                    <option>USD</option>
+                                    <option>CAD</option>
+                                    <option>EUR</option>
+                                    </select>
+                                </div>
+                                </div>
+                            </div>
+                            <!-- Series -->
+                            <div class="mb-1 pt-2">
+                                <div class="flex items-center justify-between">
+                                    <label for="countries" class="block mb-2 text-md font-medium text-light-gray">Select a series<span class="text-red-500">*</span></label>
+                                    <button class="mb-2"><span class="text-green mr-2">+</span>New Series</button>
+                                </div>        
+                                <select id="countries" class="bg-dark-gray border border-gray text-gray-900 text-sm rounded-lg focus:ring-green focus:border-green block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600">
+                                    <option class="text-light-gray" selected>Add to an existing series</option>
+                                    <option value="Series A">Series A</option>
+                                    <option value="Series B">Series B</option>
+                                    <option value="Series C">Series C</option>
+                                    <option value="Series D">Series D</option>
+                                </select>
+                            </div>
+                            <!-- Date -->
+                            <div class="mb-1 pt-2">
+                                <label for="price" class="block text-md mb-2 font-medium leading-6 text-light-gray">Auction listing date</label>
+                                <div date-rangepicker class="flex items-center">
+                                    <div class="relative">
+                                        <div class="absolute inset-y-0 start-3 flex items-center pointer-events-none">
+                                            <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="green" viewBox="0 0 20 20">
+                                                <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                                            </svg>
+                                        </div>
+                                        <input name="start" type="text" class="bg-dark-gray border border-gray text-gray-900 text-sm rounded-lg focus:ring-green focus:border-green block w-full pl-10 pr-3" placeholder="Start date ">
+                                    </div>
+                                    <span class="mx-4 text-gray-500">to</span>
+                                    <div class="relative">
+                                        <div class="absolute inset-y-0 start-3 flex items-center pointer-events-none">
+                                            <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="green" viewBox="0 0 20 20">
+                                                <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                                            </svg>
+                                        </div>
+                                        <input name="end" type="text" class="bg-dark-gray border border-gray text-gray-900 text-sm rounded-lg focus:ring-green focus:border-green block w-full pl-10 pr-3" placeholder="End date">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-1 pt-2 flex items-center gap-2 mb-4">
+                                <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-green bg-gray-100 border-gray-300 rounded-md focus:ring-green">
+                                <label for="default-checkbox" class="ml-1 text-sm font-medium text-light-gray">Tentative (Subject to change)</label>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Limited Edition -->
+                    <div class="hidden rounded-lg bg-gray-50 dark:bg-gray-800" id="editions" role="tabpanel" aria-labelledby="editions-tab">
+                        <form>
+                            <!-- Supply -->
+                            <div class="mb-1">
+                                <label for="supply" class="block mb-2 text-md font-medium text-light-gray">Supply<span class="text-red">*</span></label>
+                                <input type="text" id="supply" class="bg-dark-gray border border-gray text-light-gray text-sm rounded-lg focus:ring-green focus:border-green block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green dark:focus:border-green" placeholder="Enter total supply" required>
+                            </div>                        
+                            <!-- Mint Price -->
+                            <div class="mb-1">
+                                <label for="mint-price" class="block text-md font-medium leading-6 text-light-gray">Mint Price</label>
+                                <div class="relative mt-2 rounded-lg border bg-dark-gray border-gray overflow-hidden shadow-sm">
+                                <input type="text" name="mint-price" id="mint-price" class="block bg-dark-gray w-full rounded-lg border-0 py-2.5 pl-3 left-3 text-gray-900 ring-1 ring-inset ring-gray placeholder:text-gray focus:ring-2 focus:ring-inset focus:ring-green sm:text-sm sm:leading-6" placeholder="0.00">
+                                <div class="absolute inset-y-0 right-2 top-0 flex items-center text-gray-400">
+                                    <select id="currency" name="currency" class="h-full rounded-xl border-0 bg-dark-gray px-2 py-.5 text-gray-500 focus:ring-2 focus:ring-inset focus:ring-green sm:text-sm">
+                                    <option>USD</option>
+                                    <option>CAD</option>
+                                    <option>EUR</option>
+                                    </select>
+                                </div>
+                                </div>
+                            </div>
+                            <!-- Series -->
+                            <div class="mb-1 pt-2">
+                                <div class="flex items-center justify-between">
+                                    <label for="countries" class="block mb-2 text-md font-medium text-light-gray">Select a series<span class="text-red-500">*</span></label>
+                                    <button class="mb-2"><span class="text-green mr-2">+</span>New Series</button>
+                                </div>        
+                                <select id="countries" class="bg-dark-gray border border-gray text-gray-900 text-sm rounded-lg focus:ring-green focus:border-green block w-full p-2.5">
+                                    <option class="text-light-gray" selected>Add to an existing series</option>
+                                    <option value="Series A">Series A</option>
+                                    <option value="Series B">Series B</option>
+                                    <option value="Series C">Series C</option>
+                                    <option value="Series D">Series D</option>
+                                </select>
+                            </div>
+                            <!-- Date -->
+                            <div class="mb-1 pt-2">
+                                <label for="price" class="block text-md mb-2 font-medium leading-6 text-light-gray">Set a mint date</label>
+                                <div date-rangepicker class="flex items-center">
+                                    <div class="relative">
+                                        <div class="absolute inset-y-0 start-3 flex items-center pointer-events-none">
+                                            <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="green" viewBox="0 0 20 20">
+                                                <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                                            </svg>
+                                        </div>
+                                        <input name="start" type="text" class="bg-dark-gray border border-gray text-gray-900 text-sm rounded-lg focus:ring-green focus:border-green block w-full pl-10 pr-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green dark:focus:border-green" placeholder="Start date ">
+                                    </div>
+                                    <span class="mx-4 text-gray-500">to</span>
+                                    <div class="relative">
+                                        <div class="absolute inset-y-0 start-3 flex items-center pointer-events-none">
+                                            <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="green" viewBox="0 0 20 20">
+                                                <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                                            </svg>
+                                        </div>
+                                        <input name="end" type="text" class="bg-dark-gray border border-gray text-gray-900 text-sm rounded-lg focus:ring-green focus:border-green block w-full pl-10 pr-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green dark:focus:border-green" placeholder="End date">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-1 pt-2 flex items-center gap-2 mb-4">
+                                <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-green bg-black border-gray-300 rounded-md focus:ring-green dark:focus:ring-green dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                <label for="default-checkbox" class="ml-1 text-sm font-medium text-light-gray">Tentative (Subject to change)</label>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Open Edition -->
+                    <div class="hidden rounded-lg bg-gray-50 dark:bg-gray-800" id="open-edition" role="tabpanel" aria-labelledby="open-edition-tab">
+                        <form>
+                            <!-- Reserve Price -->
+                            <div class="mb-1">
+                                <label for="price" class="block text-md font-medium leading-6 text-light-gray">Reserve Price</label>
+                                <div class="relative mt-2 rounded-lg border bg-dark-gray border-gray overflow-hidden shadow-sm">
+                                <input type="text" name="price" id="price" class="block bg-dark-gray w-full rounded-lg border-0 py-2.5 pl-3 left-3 text-gray-900 ring-1 ring-inset ring-gray placeholder:text-gray focus:ring-2 focus:ring-inset focus:ring-green sm:text-sm sm:leading-6" placeholder="0.00">
+                                <div class="absolute inset-y-0 right-2 top-0 flex items-center text-gray-400">
+                                    <select id="currency" name="currency" class="h-full rounded-xl border-0 bg-dark-gray px-2 py-.5 text-gray-500 focus:ring-2 focus:ring-inset focus:ring-green sm:text-sm">
+                                    <option>USD</option>
+                                    <option>CAD</option>
+                                    <option>EUR</option>
+                                    </select>
+                                </div>
+                                </div>
+                            </div>
+                            <!-- Series -->
+                            <div class="mb-1 pt-2">
+                                <div class="flex items-center justify-between">
+                                    <label for="countries" class="block mb-2 text-md font-medium text-light-gray">Select a series<span class="text-red-500">*</span></label>
+                                    <button class="mb-2"><span class="text-green mr-2">+</span>New Series</button>
+                                </div>        
+                                <select id="countries" class="bg-dark-gray border border-gray text-gray-900 text-sm rounded-lg focus:ring-green focus:border-green block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600">
+                                    <option class="text-light-gray" selected>Add to an existing series</option>
+                                    <option value="Series A">Series A</option>
+                                    <option value="Series B">Series B</option>
+                                    <option value="Series C">Series C</option>
+                                    <option value="Series D">Series D</option>
+                                </select>
+                            </div>
+                            <!-- Timed Toggle -->
+                            <div class="mb-1 pt-2">
+                                <label class="relative inline-flex items-center cursor-pointer">
+                                    <input type="checkbox" value="" class="sr-only peer">
+                                    <div class="w-11 h-6 bg-gray peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-green dark:peer-focus:ring-green rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-green"></div>
+                                    <span class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">Timed mint</span>
+                                </label>  
+                            </div>                          
+                            <!-- Date -->
+                            <div class="mb-1 pt-2">
+                                <label for="price" class="block text-md mb-2 font-medium leading-6 text-light-gray">Set a mint date</label>
+                                <div date-rangepicker class="flex items-center">
+                                    <div class="relative">
+                                        <div class="absolute inset-y-0 start-3 flex items-center pointer-events-none">
+                                            <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="green" viewBox="0 0 20 20">
+                                                <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                                            </svg>
+                                        </div>
+                                        <input name="start" type="text" class="bg-dark-gray border border-gray text-gray-900 text-sm rounded-lg focus:ring-green focus:border-green block w-full pl-10 pr-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green dark:focus:border-green" placeholder="Start date ">
+                                    </div>
+                                    <span class="mx-4 text-gray-500">to</span>
+                                    <div class="relative">
+                                        <div class="absolute inset-y-0 start-3 flex items-center pointer-events-none">
+                                            <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="green" viewBox="0 0 20 20">
+                                                <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                                            </svg>
+                                        </div>
+                                        <input name="end" type="text" class="bg-dark-gray border border-gray text-gray-900 text-sm rounded-lg focus:ring-green focus:border-green block w-full pl-10 pr-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green dark:focus:border-green" placeholder="End date">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-1 pt-2 flex items-center gap-2 mb-4">
+                                <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-green bg-gray-100 border-gray-300 rounded-md focus:ring-green dark:focus:ring-green dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                <label for="default-checkbox" class="ml-1 text-sm font-medium text-light-gray">Tentative (Subject to change)</label>
+                            </div>
+                        </form>
+                    </div>
+                </div>  
+            </section>
+            <!-- Button Section -->
+            <section class="flex w-full gap-2 py-4">
+                <button type="button" onclick="history.back()" class="text-white bg-stone-900 w-full rounded border border-green hover:bg-gray focus:ring-4 focus:ring-green font-medium rounded-xl text-sm px-5 py-2.5 dark:bg-greenb dark:hover:bg-green focus:outline-none dark:focus:ring-blue-800">Back</button>
+                <button type="button" onclick= "window.location.href='upload.html';" class="py-2.5 px-5 w-full text-sm font-medium text-black focus:outline-none bg-gradient-to-b from-green to-teal hover:bg-gradient-to-r from-green to-teal rounded-xl focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700">+ Artwork</button>
+            </section>
+        </main>
+        <script>
+            // Get all tab buttons
+            const tabButtons = document.querySelectorAll('[role="tab"]');
+
+            // Get all tab content
+            const tabContent = document.querySelectorAll('[role="tabpanel"]');
+
+            // Add click event listener to each tab button
+            tabButtons.forEach((button, index) => {
+            button.addEventListener('click', () => {
+                // Hide all tab content
+                tabContent.forEach(content => {
+                content.classList.add('hidden');
+                });
+
+                // Show the content associated with the clicked tab
+                tabContent[index].classList.remove('hidden');
+            });
+            });
+        </script>
+        <script>
+            // Assuming the date picker plugin is called 'datepicker'
+            const startDateInput = document.querySelector('input[name="start"]');
+            const endDateInput = document.querySelector('input[name="end"]');
+
+            // Initialize the date picker for the start date input
+            datepicker(startDateInput, {
+            // date picker options
+            });
+
+            // Initialize the date picker for the end date input
+            datepicker(endDateInput, {
+            // date picker options
+            });
+        </script>
+        <script src="node_modules/flowbite/dist/datepicker.js"></script>
+        <script src="node_modules/flowbite/dist/flowbite.min.js"></script>
+    </body>
+</html>

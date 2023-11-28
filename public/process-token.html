@@ -1,0 +1,142 @@
+<!-- gig.html -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Process Token 1</title>
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body class="bg-black text-white">
+        <main class="flex flex-col px-3">
+            <!-- Page Heading-->
+            <div class="flex gap-3 items-center mb-4 mt-3">
+            <button onclick="history.back()" class="mr-1 mt-1"><svg xmlns="http://www.w3.org/2000/svg" fill="green" height="1.25em" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M25.4 278.6L2.7 256l22.6-22.6 144-144L192 66.7 237.2 112l-22.6 22.6L125.2 224 416 224l32 0 0 64-32 0-290.7 0 89.4 89.4L237.2 400 192 445.3l-22.6-22.6-144-144z"/></svg></button>
+            <h2 class="text-3xl font-medium mt-1">Active Gig</h2>
+            </div>
+            <!-- Commisioner-->
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                    <svg class="fill-green" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1v32c0 8.8 7.2 16 16 16h32zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"/></svg>                    
+                    <h4 class="text-xl text-bold mt-1 mb-2">Process Token 1</h4>
+                </div>
+                <p class="text-green font-bold uppercase text-sm">In Review</p>
+            </div>
+            <!-- Member Profile -->
+            <div id="commissioner" class="bg-dark-gray py-2 px-3 border border-gray rounded-xl">
+                <div class="flex gap-2 items-center">
+                    <img class="rounded-lg w-16" src="img/collector/DegenDictator.png" alt="A collector named DegenDictator" />
+                    <div class="flex flex-col">
+                        <h2 class="text-lg" id="displaydisplayName">DegenDictator</h2>
+                        <p class="text-sm font-bold uppercase text-light-gray py-1" id="displayRole">Collector</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Content from Artwork Section on Artwork.html -->
+            <section class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <div class="flex flex-col gap-1 py-2 md:py-3 lg:py-4">
+                    <!-- Artwork -->
+                    <div class="flex flex-col">
+                        <div class="grid col-span-1 grid-cols-4 gap-1">
+                            <h1 class="col-span-4 text-2xl text-white font-semibold py-2">Plantasia</h1>
+                            <!-- Description Disclaimer-->
+                            <div class="block col-span-4">
+                                <div class="block">
+                                    <p class="text-sm text-light-gray mb-2">Organic life evolves</p>
+                                </div>
+                                <!-- Disclaimer -->
+                                <div class="flex gap-2 text-xs text-light-gray items-center py-2">
+                                    <span><svg class="fill-green" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg></span>
+                                    The artist can update this artwork's info.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Image-->
+                        <div class="w-full border-2 border-gray rounded-2xl overflow-hidden">
+                            <img class="w-full overflow-hidden" src="img/artwork/sol-fiend-plantasia.png" alt="A piece called Plantasia by an Artist named SolFiend">
+                        </div>
+                        <!--Buttons-->
+                        <div class="flex flex-row gap-3 p-2">
+                            <button class="flex text-sm items-center gap-2 font-medium">
+                                <span><svg class="fill-green" xmlns="http://www.w3.org/2000/svg" height=".75em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg></span>
+                                Metadata
+                            </button>
+                            <button class="flex text-sm items-center gap-2 font-medium">
+                                <span><svg class="fill-green" xmlns="http://www.w3.org/2000/svg" height=".75em" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M352 224H305.5c-45 0-81.5 36.5-81.5 81.5c0 22.3 10.3 34.3 19.2 40.5c6.8 4.7 12.8 12 12.8 20.3c0 9.8-8 17.8-17.8 17.8h-2.5c-2.4 0-4.8-.4-7.1-1.4C210.8 374.8 128 333.4 128 240c0-79.5 64.5-144 144-144h80V34.7C352 15.5 367.5 0 386.7 0c8.6 0 16.8 3.2 23.2 8.9L548.1 133.3c7.6 6.8 11.9 16.5 11.9 26.7s-4.3 19.9-11.9 26.7l-139 125.1c-5.9 5.3-13.5 8.2-21.4 8.2H384c-17.7 0-32-14.3-32-32V224zM80 96c-8.8 0-16 7.2-16 16V432c0 8.8 7.2 16 16 16H400c8.8 0 16-7.2 16-16V384c0-17.7 14.3-32 32-32s32 14.3 32 32v48c0 44.2-35.8 80-80 80H80c-44.2 0-80-35.8-80-80V112C0 67.8 35.8 32 80 32h48c17.7 0 32 14.3 32 32s-14.3 32-32 32H80z"/></svg></span>
+                                Share
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Details Displayed from Gig-Details.html -->
+                <div class="flex flex-col gap-2 mt-4 bg-dark-gray border-2 border-gray rounded-2xl p-4">
+                    <p class="flex py-1 px-3 md:mt-2 bg-green text-black text-sm font-bold spacing-relaxed uppercase w-fit rounded-full border border-gray">Gig Request</p>
+                    <h3 class="text-2xl font-bold mt-3" id="displayTitle">Plantasia</h3>
+                    <p class="text-sm text-light-gray" id="displayDescription">Organic life evolves</p>
+                    <div class="grid grid-cols-2 mt-1">
+                        <div class="flex flex-col">
+                            <h4 class="text-md mt-1 font-medium">Style</h4>
+                            <p class="text-sm text-light-gray" id="displayStyle">AI Art</p>
+                        </div>
+                        <div class="flex flex-col">
+                            <h4 class="text-md mt-1 font-medium">Orientation</h4>
+                            <p class="text-sm text-light-gray" id="displayOrientation">Square</p>
+                        </div>
+                    </div>       
+                    <div class="grid grid-cols-2 mt-1">
+                        <div class="flex flex-col">
+                            <h4 class="text-md mt-1 font-medium">Budget</h4>
+                            <p class="text-sm text-light-gray" id="displayBudget">1 SOL</p>
+                        </div>
+                        <div class="flex flex-col">
+                            <h4 class="text-md mt-1 font-medium">Due Date</h4>
+                            <p class="text-sm text-light-gray" id="displayDue">January 1, 2024</p>
+                        </div>
+                    </div>
+                    <h4 class="text-lg mt-1 font-medium">Insipration</h4>
+                    <div class="flex gap-2 bg-dark-gray py-1 px-1 border border-gray rounded-xl items-center">
+                        <img class="rounded-lg w-10" src="img/collector/DegenDictator.png" alt="A collector named DegenDictator" />
+                        <p class="text-sm" id="displayInspiration">degendictator.png</p>
+                    </div> 
+                    <h3 class="text-xl mt-3 border-t pt-6 border-gray font-bold">Suggested Price</h3>
+                    <div class="grid grid-cols-4 col-span-4 gap-3 mb-3 text-white lg:mt-3">
+                        <div class="col-span-2">
+                            <p class="uppercase text-xs font-bold text-light-gray">WL Price</p>
+                            <h3 class="text-lg font-medium">1 SOL</h3>
+                            <p class="text-sm font-bold text-light-gray">$56.70</p>
+                        </div>            
+                        <div class="col-span-2">
+                            <p class="uppercase text-xs font-bold text-light-gray">Mint Price</p>
+                            <h3 class="text-lg font-medium">1.5 SOL</h3>
+                            <p class="text-sm font-bold text-light-gray">$85.05</p>
+                        </div>
+                    </div>
+                    <h3 class="text-xl mt-3 border-t pt-6 border-gray font-bold">Royalties</h3>
+                    <div class="grid grid-cols-2">
+                        <div class="flex flex-col">
+                            <h4 class="text-md mt-1 font-medium"></h4>Royalties</h4>
+                            <p class="text-sm text-light-gray">5%</p>
+                        </div>                        
+                        <div class="flex flex-col">
+                            <h4 class="text-md mt-1 font-medium"></h4>Split</h4>
+                            <p class="text-sm text-light-gray">50/50</p>
+                        </div>
+                        <div class="flex flex-col">
+                            <h4 class="text-md mt-1 font-medium"></h4>Wallet Address</h4>
+                            <p class="text-sm text-light-gray">5gjt...t6y7</p>
+                        </div>
+                        <div class="flex flex-col">
+                            <h4 class="text-md mt-1 font-medium"></h4>Wallet Address</h4>
+                            <p class="text-sm text-light-gray">6et5...4sk7</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="flex w-full gap-2 py-4">
+                <button type="button" onclick="history.back()" class="text-white bg-stone-900 w-full rounded border border-green hover:bg-gray focus:ring-4 focus:ring-green font-medium rounded-xl text-sm px-5 py-2.5 dark:bg-greenb dark:hover:bg-green focus:outline-none dark:focus:ring-blue-800">Review</button>
+                <button type="button" onclick= "window.location.href='upload.html';" class="py-2.5 px-5 w-full text-sm font-medium text-black focus:outline-none bg-gradient-to-b from-green to-teal hover:bg-gradient-to-r from-green to-teal rounded-xl focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700">Approve</button>
+            </section>
+        </main>
+    </body>
+</html>

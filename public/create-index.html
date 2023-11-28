@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create on CrayonDAOO</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-black text-white">
+    <nav>
+        <div class="fixed group z-50 w-full h-16 max-w-lg -translate-x-1/2 bg-dark-gray border border-gray rounded-t-xl overflow-hidden bottom-0 left-1/2">
+            <div class="grid h-full max-w-lg grid-cols-5 mx-auto">
+                <button onclick= "window.location.href='create-index.html';" data-tooltip-target="tooltip-home" type="button" class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray active:bg-gradient-to-b from-green to-teal group">
+                    <svg class="fill-white" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M347.8 17C319.3 6 288.4 0 256 0C114.6 0 0 114.6 0 256S114.6 512 256 512c17.7 0 32-14.3 32-32s-14.3-32-32-32C150 448 64 362 64 256S150 64 256 64c14.1 0 27.8 1.5 41 4.4L347.8 17zM310.6 349.4c-5.4 5.3-11.4 9.8-17.8 13.6c-1.7 2.7-3 5.7-3.8 9c-4.4 17.1 5.9 34.6 23 39c12.8 3.3 26.2 5 40 5c88.4 0 160-71.6 160-160c0-32.2-5.9-63-16.8-91.3l-51.4 51.4c2.7 12.9 4.2 26.2 4.2 39.9c0 53-43 96-96 96c-8.3 0-16.4-1.1-24-3c-5.9-1.5-11.9-1.3-17.4 .4zM473.9 16c-18.8-18.8-49.2-18.7-67.9 0L366.4 55.7l89.3 89.3 39.8-38.9c19.1-18.7 19.2-49.4 .4-68.2L473.9 16zM200.5 221.8c-7 7-12.3 15.6-15.4 25l-23.8 71.3c-2.9 8.6-.6 18.1 5.8 24.6s15.9 8.7 24.6 5.8l71.5-23.9c9.2-3.1 17.6-8.2 24.5-15L432.8 167.5 343.7 78.4 200.5 221.8z"/></svg>
+                    <span class="sr-only">Create</span>
+                </button>
+                <div id="tooltip-home" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 hover:bg-gray rounded-lg shadow-sm opacity-0 tooltip">
+                    Create
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+                <button onclick= "window.location.href='manage.html';" data-tooltip-target="tooltip-wallet" type="button" class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray active:bg-gradient-to-b from-green to-teal group">
+                    <svg class="fill-white" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M152.1 38.2c9.9 8.9 10.7 24 1.8 33.9l-72 80c-4.4 4.9-10.6 7.8-17.2 7.9s-12.9-2.4-17.6-7L7 113C-2.3 103.6-2.3 88.4 7 79s24.6-9.4 33.9 0l22.1 22.1 55.1-61.2c8.9-9.9 24-10.7 33.9-1.8zm0 160c9.9 8.9 10.7 24 1.8 33.9l-72 80c-4.4 4.9-10.6 7.8-17.2 7.9s-12.9-2.4-17.6-7L7 273c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l22.1 22.1 55.1-61.2c8.9-9.9 24-10.7 33.9-1.8zM224 96c0-17.7 14.3-32 32-32H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H256c-17.7 0-32-14.3-32-32zm0 160c0-17.7 14.3-32 32-32H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H256c-17.7 0-32-14.3-32-32zM160 416c0-17.7 14.3-32 32-32H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H192c-17.7 0-32-14.3-32-32zM48 368a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg>
+                    <span class="sr-only">Manage</span>
+                </button>
+                <div id="tooltip-wallet" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                    Manage
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+                <div class="flex items-center justify-center">
+                    <button onclick= "window.location.href='index.html';" data-tooltip-target="tooltip-new" type="button" class="inline-flex items-center justify-center w-10 h-10 font-medium bg-gradient-to-b from-green to-teal hover:bg-gray rounded-xl group focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800">
+                        <svg class="fill-black" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M304.8 173.3c-14.3-8.4-31-13.3-48.8-13.3c-53 0-96 43-96 96s43 96 96 96s96-43 96-96h64c0 73.5-49.6 135.5-117.2 154.2C290.8 394.7 274.7 384 256 384s-34.8 10.7-42.8 26.2c-51.7-14.3-92.8-53.9-109.4-104.6c14.4-8.3 24.1-23.8 24.1-41.7c0-19.4-11.5-36.1-28-43.7C116.2 149.1 179.9 96 256 96c35.5 0 68.3 11.6 94.9 31.2l22.8-22.8C341.2 79 300.4 64 256 64C163.1 64 85.7 129.9 67.9 217.6C47.2 222.9 32 241.7 32 264c0 23.8 17.3 43.6 40.1 47.4c19.3 64.3 71.5 114.4 137 130.9C213.8 463.8 233 480 256 480s42.2-16.2 46.9-37.8C386.3 421.3 448 345.9 448 256h64c0 141.4-114.6 256-256 256S0 397.4 0 256S114.6 0 256 0c62.1 0 118.9 22.1 163.3 58.8L463 15c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-182 182c3.3 7.7 5.1 16.1 5.1 25c0 35.3-28.7 64-64 64s-64-28.7-64-64s28.7-64 64-64c8.9 0 17.3 1.8 25 5.1l23.8-23.8z"/></svg>
+                        <span class="sr-only">Discover</span>
+                    </button>
+                </div>
+                <div id="tooltip-new" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 hover:bg-gray rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                    Discover
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+                <button onclick= "window.location.href='profile.html';" data-tooltip-target="tooltip-profile" type="button" class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray active:bg-gradient-to-b from-green to-teal group">
+                    <svg class="w-5 h-5 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 0a10 10 0 1 0 10 10A10.011 10.011 0 0 0 10 0Zm0 5a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm0 13a8.949 8.949 0 0 1-4.951-1.488A3.987 3.987 0 0 1 9 13h2a3.987 3.987 0 0 1 3.951 3.512A8.949 8.949 0 0 1 10 18Z"/>
+                    </svg>
+                    <span class="sr-only">Profile</span>
+                </button>
+                <div id="tooltip-profile" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                    Profile
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>            
+                <button onclick= "window.location.href='settings.html';" data-tooltip-target="tooltip-settings" type="button" class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray active:bg-gradient-to-b from-green to-teal group">
+                    <svg class="w-5 h-5 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12.25V1m0 11.25a2.25 2.25 0 0 0 0 4.5m0-4.5a2.25 2.25 0 0 1 0 4.5M4 19v-2.25m6-13.5V1m0 2.25a2.25 2.25 0 0 0 0 4.5m0-4.5a2.25 2.25 0 0 1 0 4.5M10 19V7.75m6 4.5V1m0 11.25a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5ZM16 19v-2"/>
+                    </svg>
+                    <span class="sr-only">Settings</span>
+                </button>
+                <div id="tooltip-settings" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                    Settings
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+            </div>
+        </div>    
+    </nav>   
+    <main class="flex flex-col px-3 sm:px-6 md:px-8 lg:px-12 xl:px-18 justify-center">
+        <!-- Page Heading-->
+        <div class="flex flex-row gap-3 items-center mb-3 mt-3">
+            <div class="mr-1 mt-1"><svg class="fill-green" xmlns="http://www.w3.org/2000/svg" height="1.25em" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M25.4 278.6L2.7 256l22.6-22.6 144-144L192 66.7 237.2 112l-22.6 22.6L125.2 224 416 224l32 0 0 64-32 0-290.7 0 89.4 89.4L237.2 400 192 445.3l-22.6-22.6-144-144z"/></svg></div>
+            <h2 class="text-3xl font-medium mt-1">Create</h2>
+        </div>
+        <div class="flex flex-col md:flex-row justify-center gap-1 md:gap-3">
+        <!-- Artwork -->
+            <button onclick="window.location.href='create-artwork.html'" class="flex flex-col gap-1 md:mt-1">
+                <div class="flex flex-row gap-3 items-center">
+                    <span><svg class="fill-green" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M512 256c0 .9 0 1.8 0 2.7c-.4 36.5-33.6 61.3-70.1 61.3H344c-26.5 0-48 21.5-48 48c0 3.4 .4 6.7 1 9.9c2.1 10.2 6.5 20 10.8 29.9c6.1 13.8 12.1 27.5 12.1 42c0 31.8-21.6 60.7-53.4 62c-3.5 .1-7 .2-10.6 .2C114.6 512 0 397.4 0 256S114.6 0 256 0S512 114.6 512 256zM128 288a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm0-96a32 32 0 1 0 0-64 32 32 0 1 0 0 64zM288 96a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm96 96a32 32 0 1 0 0-64 32 32 0 1 0 0 64z"/></svg></span>
+                    <h2 class="text-lg text-white">Artwork</h2>
+                </div>
+                <img class="w-full md:w-64 rounded-xl overflow-hidden object-cover h-36 md:h-full border-2 border-gray hover:border-green" src="img/artwork/create-artwork.png" alt="">
+            </button>
+            <div class="flex flex-col">
+                <!-- Gig and Quest -->
+                <div class="flex flex-col md:flex-row">    
+                    <div class="grid grid-cols-2 mt-1 gap-2">
+                        <!-- Gig -->
+                        <button onclick="window.location.href='create-gig.html'" class="flex flex-col gap-1">
+                            <div class="flex flex-row gap-3 items-center">
+                                <span><svg class="fill-green" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M176 80H80v96h96V80zM80 32h96c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H80c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48zm96 304H80v96h96V336zM80 288h96c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H80c-26.5 0-48-21.5-48-48V336c0-26.5 21.5-48 48-48zM336 80v96h96V80H336zm-48 0c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H336c-26.5 0-48-21.5-48-48V80zm96 192c13.3 0 24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H408v64c0 13.3-10.7 24-24 24s-24-10.7-24-24V408H296c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V296c0-13.3 10.7-24 24-24z"/></svg></span>
+                                <h2 class="text-lg text-white">Gig</h2>
+                            </div>
+                            <img class="rounded-xl overflow-hidden object-cover h-36 md:h-48 border-2 border-gray hover:border-green" src="img/artwork/gig.png" alt="">
+                        </button>
+                        <!-- Quest --> 
+                        <div class="flex flex-col gap-1 opacity-30 relative">
+                            <div class="flex flex-row gap-3 items-center">
+                                <span><svg class="fill-green" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M511.8 18.6c.8-5.1-.8-10.3-4.5-13.9S498.5-.6 493.4 .2L417.6 12.8c-16.4 2.7-31.6 10.6-43.4 22.3L166.6 242.7 269.3 345.4 476.8 137.8c11.8-11.8 19.6-27 22.3-43.4l12.6-75.8zM84.7 228.7l-16 16c-5.4 5.4-6.2 13.8-2 20.2l53.1 79.6c2.1 3.2 1.7 7.4-1 10.1L79.2 394.2c-2.1 2.1-5.3 2.9-8.2 1.9L37.1 384.8c-5.7-1.9-12.1-.4-16.4 3.9l-16 16c-6.2 6.2-6.2 16.4 0 22.6l80 80c6.2 6.2 16.4 6.2 22.6 0l16-16c4.3-4.3 5.8-10.6 3.9-16.4L115.9 441c-1-2.9-.2-6 1.9-8.2l39.6-39.6c2.7-2.7 6.9-3.1 10.1-1l79.6 53.1c6.3 4.2 14.8 3.4 20.2-2l16-16c6.2-6.2 6.2-16.4 0-22.6l-176-176c-6.2-6.2-16.4-6.2-22.6 0z"/></svg></span>
+                                <h2 class="text-lg text-white">Quest</h2>
+                            </div>
+                            <p class="text-light-gray font-bold text-sm py-2 px-3 rounded-full absolute bottom-2 left-2">Coming soon...</p>
+                            <img class="rounded-xl opacity-30 overflow-hidden object-cover h-36 md:h-48 border-2 border-gray" src="img/artwork/quest.png" alt="">
+                        </div>                         
+                    </div>
+                </div> 
+                <!-- Events and Tournament -->
+                <div class="grid grid-cols-2 mt-1 gap-2">
+                    <!-- Events -->
+                    <div class="flex flex-col gap-1 opacity-30 relative">
+                        <div class="flex flex-row gap-3 items-center">           
+                            <span><svg class="fill-green" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M128 32V64H80c-26.5 0-48 21.5-48 48v48H480V112c0-26.5-21.5-48-48-48H384V32c0-17.7-14.3-32-32-32s-32 14.3-32 32V64H192V32c0-17.7-14.3-32-32-32s-32 14.3-32 32zM480 192H32V464c0 26.5 21.5 48 48 48H432c26.5 0 48-21.5 48-48V192zM256 248c13.3 0 24 10.7 24 24v56h56c13.3 0 24 10.7 24 24s-10.7 24-24 24H280v56c0 13.3-10.7 24-24 24s-24-10.7-24-24V376H176c-13.3 0-24-10.7-24-24s10.7-24 24-24h56V272c0-13.3 10.7-24 24-24z"/></svg></span>
+                            <h2 class="text-lg text-white">Events</h2>
+                        </div> 
+                        <p class="text-light-gray font-bold text-sm py-2 px-3 rounded-full absolute bottom-2 left-2">Coming soon...</p>
+                        <img class="rounded-xl overflow-hidden object-cover h-36 md:h-48 border-2 opacity-30 border-gray" src="img/artwork/events.png" alt="">                
+                    </div>
+                    <!-- Tournament -->  
+                    <div class="flex flex-col gap-1 opacity-30 relative">
+                        <div class="flex flex-row gap-3 items-center">                           
+                            <span><svg class="fill-green" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M176 0H400c26.5 0 48.1 21.8 47.1 48.2c-.2 5.3-.4 10.6-.7 15.8H552c13.3 0 24 10.7 24 24c0 92.6-33.5 157-78.5 200.7c-44.3 43.1-98.3 64.8-138.2 75.8c-23.4 6.5-39.4 26-39.4 45.6c0 20.9 17 37.9 37.9 37.9H384c17.7 0 32 14.3 32 32s-14.3 32-32 32H192c-17.7 0-32-14.3-32-32s14.3-32 32-32h26.1c20.9 0 37.9-17 37.9-37.9c0-19.6-15.9-39.2-39.4-45.6c-39.9-11-93.9-32.7-138.1-75.8C33.5 245 0 180.6 0 88C0 74.7 10.7 64 24 64H129.6c-.3-5.2-.5-10.4-.7-15.8C127.9 21.8 149.5 0 176 0zM133.2 112H48.9c5.1 66.3 31.1 111.2 63 142.3c22.4 21.8 48.3 37.3 73.2 48.3c-22.7-40.3-42.8-100.5-51.9-190.6zM390.8 302.6c24.9-11 50.8-26.5 73.2-48.3c32-31.1 58-76 63-142.3H442.7c-9.1 90.1-29.2 150.3-51.9 190.6zM295.2 86.5c-2.9-5.9-11.4-5.9-14.3 0l-19.2 38.9c-1.2 2.4-3.4 4-6 4.4L212.7 136c-6.6 1-9.2 9-4.4 13.6l31 30.2c1.9 1.8 2.7 4.5 2.3 7.1l-7.3 42.7c-1.1 6.5 5.7 11.5 11.6 8.4L284.3 218c2.3-1.2 5.1-1.2 7.4 0l38.4 20.2c5.9 3.1 12.7-1.9 11.6-8.4L334.4 187c-.4-2.6 .4-5.2 2.3-7.1l31-30.2c4.7-4.6 2.1-12.7-4.4-13.6l-42.9-6.2c-2.6-.4-4.9-2-6-4.4L295.2 86.5z"/></svg></span>
+                            <h2 class="text-lg text-white">Tournament</h2>
+                        </div> 
+                        <p class="text-light-gray font-bold text-sm py-2 px-3 rounded-full absolute bottom-2 left-2">Coming soon...</p>
+                        <img class="rounded-xl overflow-hidden object-cover h-36 md:h-48 border-2 opacity-30 border-gray" src="img/artwork/tournament.png" alt="">
+                    </div>                         
+                </div>   
+            </div>    
+        </div>      
+    </main>
+</body>
+</html>

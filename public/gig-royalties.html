@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gig Royalties</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+    <body class="bg-black text-white"> 
+    <main class="flex flex-col px-3">
+        <!-- Page Heading-->
+        <div class="flex gap-3 items-center mb-4 mt-3">
+            <button onclick="history.back()" class="mr-1 mt-1"><svg class="fill-green" xmlns="http://www.w3.org/2000/svg" height="1.25em" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M25.4 278.6L2.7 256l22.6-22.6 144-144L192 66.7 237.2 112l-22.6 22.6L125.2 224 416 224l32 0 0 64-32 0-290.7 0 89.4 89.4L237.2 400 192 445.3l-22.6-22.6-144-144z"/></svg></button>
+            <h2 class="text-3xl font-medium mt-1">Create a Gig</h2>
+        </div>
+        <!-- Gig Details -->
+        <section class="flex flex-col">
+            <!-- Section Header -->
+            <div class="flex gap-3 items-center mb-3">
+                <div class="mr-1"><svg class="fill-green" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M309 106c11.4-7 19-19.7 19-34c0-22.1-17.9-40-40-40s-40 17.9-40 40c0 14.4 7.6 27 19 34L209.7 220.6c-9.1 18.2-32.7 23.4-48.6 10.7L72 160c5-6.7 8-15 8-24c0-22.1-17.9-40-40-40S0 113.9 0 136s17.9 40 40 40c.2 0 .5 0 .7 0L86.4 427.4c5.5 30.4 32 52.6 63 52.6H426.6c30.9 0 57.4-22.1 63-52.6L535.3 176c.2 0 .5 0 .7 0c22.1 0 40-17.9 40-40s-17.9-40-40-40s-40 17.9-40 40c0 9 3 17.3 8 24l-89.1 71.3c-15.9 12.7-39.5 7.5-48.6-10.7L309 106z"/></svg></div>
+                <div class="flex flex-col">
+                    <h2 class="text-2xl font-medium mt-1">Royalties</h2>
+                </div>
+            </div>
+            <div class="flex flex-row rounded-lg overflow-hidden bg-dark-gray">
+                <div class="w-1 h-auto bg-green"></div>
+                <p class="py-2 px-2">Royalty changes will only be applied to this artwork, not the entire series</p>
+            </div>
+            <div class="flex flex-col mt-3 ">
+                <p class="text-md font-bold">Royalty on secondary sales:</p>
+                <p class="text-md text-light-gray">*Recommended 2-5%</p>
+            </div>
+            <div class="grid grid-cols-2">
+                <div class="mt-3">
+                    <div class="flex items-center mb-1">
+                        <input type="radio" id="radio-2" name="percentage" value="2%" class="w-4 h-4 text-gray bg-dark-gray border-gray rounded focus:ring-green">
+                        <label for="radio-2" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">2%</label>
+                    </div>
+                    <div class="flex items-center mb-1">
+                        <input type="radio" id="radio-3" name="percentage" value="3%" class="w-4 h-4 text-gray bg-dark-gray border-gray rounded focus:ring-green">
+                        <label for="radio-3" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">3%</label>
+                    </div>
+                    <div class="flex items-center mb-1">
+                        <input type="radio" id="radio-4" name="percentage" value="4%" class="w-4 h-4 text-gray bg-dark-gray border-gray rounded focus:ring-green">
+                        <label for="radio-4" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">4%</label>
+                    </div>
+                </div>
+                <div class="mt-3">    
+                    <div class="flex items-center mb-1">
+                        <input type="radio" id="radio-5" name="percentage" value="5%" class="w-4 h-4 text-gray bg-dark-gray border-gray rounded focus:ring-green">
+                        <label for="radio-5" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">5%</label>
+                    </div>
+                    <div class="flex items-center mb-1">
+                        <input type="radio" id="radio-5" name="percentage" value="5%" class="w-4 h-4 text-gray bg-dark-gray border-gray rounded focus:ring-green">
+                        <div class="flex items-center gap-2">    
+                            <label for="radio-5" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Custom</label>
+                            <input type="text" id="custom-royalty" class="w-3/4 bg-dark-gray border border-gray text-light-gray text-sm rounded-lg focus:ring-green focus:border-green block w-full p-2.5 custom-royalty" placeholder="%" required>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col mt-3">
+                <p class="text-md font-bold">Wallet Address<span class="text-red">*</span></p>
+                <p class="text-sm text-light-gray">Primary and secondary fees are sent here. You can edit these details when creating individual artworks.</p>
+            </div>       
+            <div class="">
+                <!-- Wallet Addresses -->
+                <form> 
+                    <div class="mb-1 pt-2">
+                        <div class="grid grid-cols-2 gap-3">
+                            <label for="wallet-address" class="block mb-2 text-md font-medium">Wallet Address</label>
+                            <label for="wallet-address" class="block mb-2 text-md font-medium">Split</label>
+                        </div>
+                        <div class="grid grid-cols-2 gap-3">
+                            <input type="text" id="wallet-address" class="w-3/4 bg-dark-gray border border-gray text-light-gray text-sm rounded-lg focus:ring-green focus:border-green block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Wallet address" required>
+                            <input type="text" id="wallet-address-1" class="w-3/4 bg-dark-gray border border-gray text-light-gray text-sm rounded-lg focus:ring-green focus:border-green block w-full p-2.5 wallet-percentage" placeholder="Wallet percentage" required>
+                        </div>
+                        <div class="grid grid-cols-2 gap-3 mt-2 hidden">
+                            <input type="text" id="wallet-address" class="w-3/4 bg-dark-gray border border-gray text-light-gray text-sm rounded-lg focus:ring-green focus:border-green block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Wallet address" required>
+                            <input type="text" id="wallet-address-1" class="w-3/4 bg-dark-gray border border-gray text-light-gray text-sm rounded-lg focus:ring-green focus:border-green block w-full p-2.5 wallet-percentage" placeholder="Wallet percentage" required>
+                        </div>
+                        <button class="text-md font-bold flex gap-2 items-center mt-3" id="add-wallet-button">
+                            <svg class="fill-green" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+                                <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/>                            </svg>
+                            Add another wallet
+                        </button>
+                    </div>                                  
+                </form>
+            </div>  
+        </section>
+        <!-- Button Section -->
+        <section class="flex gap-2 py-4">
+            <button type="button" onclick="history.back()" class="text-white bg-stone-900 w-full rounded border border-green hover:bg-gray focus:ring-4 focus:ring-green font-medium rounded-xl text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Back</button>
+            <button type="button" onclick="window.location.href='gig-attributes.html'" class="py-2.5 px-5 w-full text-sm font-medium text-black focus:outline-none bg-gradient-to-b from-green to-teal hover:bg-gradient-to-r from-green to-teal rounded-xl focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700">Attributes</button>
+        </section>
+
+    </main>
+    <script>
+            // Get all tab buttons
+            const tabButtons = document.querySelectorAll('[role="tab"]');
+
+            // Get all tab content
+            const tabContent = document.querySelectorAll('[role="tabpanel"]');
+
+            // Add click event listener to each tab button
+            tabButtons.forEach((button, index) => {
+            button.addEventListener('click', () => {
+                // Hide all tab content
+                tabContent.forEach(content => {
+                content.classList.add('hidden');
+                });
+
+                // Show the content associated with the clicked tab
+                tabContent[index].classList.remove('hidden');
+            });
+            });
+        </script>
+        <script>
+            // Assuming the date picker plugin is called 'datepicker'
+            const startDateInput = document.querySelector('input[name="start"]');
+            const endDateInput = document.querySelector('input[name="end"]');
+            
+            // Initialize the date picker for the start date input
+            datepicker(startDateInput, {
+              // date picker options
+            });
+            
+            // Initialize the date picker for the end date input
+            datepicker(endDateInput, {
+              // date picker options
+            });
+        </script>
+        <script>
+            // Add event listener to the button
+            document.querySelector('button.text-md').addEventListener('click', function() {
+                // Select the hidden div and remove the "hidden" class
+                document.querySelector('div.grid.grid-cols-2.gap-3.mt-2.hidden').classList.remove('hidden');
+            });
+        </script>
+        <script>
+            // Select the input fields
+            const walletInputs = document.querySelectorAll('input[id="wallet-percentage"]');
+
+            // Add event listener to each input field
+            walletInputs.forEach((input, index) => {
+                input.addEventListener('input', () => {
+                    // Calculate the total percentage
+                    let totalPercentage = 0;
+                    walletInputs.forEach((input, i) => {
+                        if (i !== index) {
+                            totalPercentage += parseInt(input.value) || 0;
+                        }
+                    });
+
+                    // Update the percentages
+                    walletInputs.forEach((input, i) => {
+                        if (i !== index) {
+                            input.value = ((100 - totalPercentage) / (walletInputs.length - 1)).toFixed(2);
+                        }
+                    });
+                });
+            });
+        </script>
+        <script src="../path/to/flowbite/dist/datepicker.js"></script>
+        <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+    </body>
+</html>

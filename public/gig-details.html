@@ -1,0 +1,63 @@
+<!-- gig-details.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gig Details</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-black text-white">
+    <main class="flex flex-col px-3">
+        <!-- Page Heading-->
+        <div class="flex gap-3 items-center mb-4 mt-3">
+        <button onclick="history.back()" class="mr-1 mt-1"><svg class="fill-green" xmlns="http://www.w3.org/2000/svg" height="1.25em" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M25.4 278.6L2.7 256l22.6-22.6 144-144L192 66.7 237.2 112l-22.6 22.6L125.2 224 416 224l32 0 0 64-32 0-290.7 0 89.4 89.4L237.2 400 192 445.3l-22.6-22.6-144-144z"/></svg></button>
+        <h2 class="text-3xl font-medium mt-1">Gig Details</h2>
+        </div>
+        <!-- Gig Details Form -->
+        <form id="gigForm">
+        <div class="mb-4">
+            <label for="title" class="block text-sm font-medium text-light-gray">Title</label>
+            <input type="text" id="title" name="title" class="mt-1 p-2 border border-gray bg-dark-gray rounded-lg w-full" required>
+        </div>
+        <div class="mb-4">
+            <label for="description" class="block text-sm font-medium text-light-gray">Description</label>
+            <textarea id="description" name="description" class="mt-1 p-2 border border-gray bg-dark-gray rounded-lg w-full" required></textarea>
+        </div>
+        <div class="mb-4">
+            <label for="file" class="block text-sm font-medium text-light-gray">File</label>
+            <input type="file" id="file" name="file" class="mt-1 p-2 border border-gray bg-dark-gray rounded-lg w-full" required>
+        </div>
+        <div class="mb-4">
+            <label for="file" class="flex flex-col items-center justify-center w-full h-36 border-2 border-gray border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
+                <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                    <svg class="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
+                        <path stroke="green" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"/>
+                    </svg>
+                    <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Click to upload</span> or drag and drop</p>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
+                </div>
+                <input id="file" type="file" name="file" class="hidden" />
+            </label>
+        </div> 
+        <div class="mb-4">
+            <label for="budget" class="block text-sm font-medium text-light-gray">Budget</label>
+            <input type="text" id="budget" name="budget" class="mt-1 p-2 border border-gray bg-dark-gray rounded-lg w-full" required>
+        </div>
+        <button type="submit" class="bg-green text-black font-medium py-2 px-4 rounded-lg">Submit</button>
+        </form>
+    </main>
+    <script>
+        // Form submission
+        document.getElementById('gigForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const title = document.getElementById('title').value;
+        const description = document.getElementById('description').value;
+        const file = document.getElementById('file').value;
+        const budget = document.getElementById('budget').value;
+        // Redirect to gig.html with form data as query parameters
+        window.location.href = `gig.html?title=${title}&description=${description}&file=${file}&budget=${budget}`;
+        });
+    </script>
+</body>
+</html>

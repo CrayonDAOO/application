@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Artwork</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+    <body class="bg-black text-white"> 
+    <main class="flex flex-col px-3">
+        <!-- Page Heading-->
+        <div class="flex gap-3 items-center mb-4 mt-3">
+            <button onclick="history.back()" class="mr-1 mt-1"><svg class="fill-green" xmlns="http://www.w3.org/2000/svg" height="1.25em" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M25.4 278.6L2.7 256l22.6-22.6 144-144L192 66.7 237.2 112l-22.6 22.6L125.2 224 416 224l32 0 0 64-32 0-290.7 0 89.4 89.4L237.2 400 192 445.3l-22.6-22.6-144-144z"/></svg></button>
+            <h2 class="text-3xl font-medium mt-1">Create Artwork</h2>
+        </div>
+        <!-- Upload Artwork -->
+        <section class="flex flex-col">
+            <!-- Section Header -->
+            <div class="flex gap-3 items-center mb-3">
+                <div class="mr-1"><svg class="fill-green" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M288 109.3V352c0 17.7-14.3 32-32 32s-32-14.3-32-32V109.3l-73.4 73.4c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l128-128c12.5-12.5 32.8-12.5 45.3 0l128 128c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L288 109.3zM64 352H192c0 35.3 28.7 64 64 64s64-28.7 64-64H448c35.3 0 64 28.7 64 64v32c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V416c0-35.3 28.7-64 64-64zM432 456a24 24 0 1 0 0-48 24 24 0 1 0 0 48z"/></svg></div>
+                <h2 class="text-2xl font-medium mt-1">Upload Files</h2>
+            </div>
+            <div id="max-w-lg">
+                <form>
+                    <!-- File Upload -->
+                    <div class="flex items-center justify-center w-full">
+                        <label for="dropzone-file" class="flex flex-col items-center justify-center w-full h-36 border-2 border-gray border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
+                            <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                                <svg class="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
+                                    <path stroke="green" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"/>
+                                </svg>
+                                <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Click to upload</span> or drag and drop</p>
+                                <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
+                            </div>
+                            <input id="dropzone-file" type="file" class="hidden" />
+                        </label>
+                    </div> 
+                    <!-- Artwork title -->
+                    <div class="mb-1 pt-2">
+                        <label for="artwork_title" class="block mb-2 text-md font-medium dark:text-white">Artwork title</label>
+                        <input type="text" id="first_name" class="bg-dark-gray border border-gray text-light-gray text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter the title of your artwork" required>
+                    </div>
+                    <!-- Description -->
+                    <div class="mb-1 pt-2">
+                        <label for="artwork_description" class="block mb-2 text-md font-medium text-gray-900 dark:text-white">Artwork Description </label>
+                        <textarea id="artwork-description" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-dark-gray rounded-lg border border-gray focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Describe your artwork in detail ..."></textarea>
+                    </div>                    
+                </form>
+            </div>  
+        </section>
+        <!-- Button Section -->
+        <section class="flex w-full gap-2 py-4">
+            <button type="button" onclick="history.back()" class="text-white bg-stone-900 w-full rounded border border-green hover:bg-gray focus:ring-4 focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Back</button>
+            <button type="button" onclick="window.location.href='artwork-royalties.html'" class="py-2.5 px-5 w-full text-sm font-medium text-black focus:outline-none bg-gradient-to-b from-green to-teal hover:bg-gradient-to-r from-green to-teal rounded-xl focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700">Next</button>
+        </section>
+
+    </main>
+    <script>
+            // Get all tab buttons
+            const tabButtons = document.querySelectorAll('[role="tab"]');
+
+            // Get all tab content
+            const tabContent = document.querySelectorAll('[role="tabpanel"]');
+
+            // Add click event listener to each tab button
+            tabButtons.forEach((button, index) => {
+            button.addEventListener('click', () => {
+                // Hide all tab content
+                tabContent.forEach(content => {
+                content.classList.add('hidden');
+                });
+
+                // Show the content associated with the clicked tab
+                tabContent[index].classList.remove('hidden');
+            });
+            });
+        </script>
+        <script>
+            // Assuming the date picker plugin is called 'datepicker'
+            const startDateInput = document.querySelector('input[name="start"]');
+            const endDateInput = document.querySelector('input[name="end"]');
+            
+            // Initialize the date picker for the start date input
+            datepicker(startDateInput, {
+              // date picker options
+            });
+            
+            // Initialize the date picker for the end date input
+            datepicker(endDateInput, {
+              // date picker options
+            });
+        </script>
+        <script src="../path/to/flowbite/dist/datepicker.js"></script>
+        <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+    </body>
+</html>

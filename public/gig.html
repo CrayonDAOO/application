@@ -1,0 +1,116 @@
+<!-- gig.html -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gig</title>
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body class="bg-black text-white">
+        <main class="flex flex-col px-3">
+            <!-- Page Heading-->
+            <div class="flex gap-3 items-center mb-4 mt-3">
+            <button onclick="history.back()" class="mr-1 mt-1"><svg xmlns="http://www.w3.org/2000/svg" fill="green" height="1.25em" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M25.4 278.6L2.7 256l22.6-22.6 144-144L192 66.7 237.2 112l-22.6 22.6L125.2 224 416 224l32 0 0 64-32 0-290.7 0 89.4 89.4L237.2 400 192 445.3l-22.6-22.6-144-144z"/></svg></button>
+            <h2 class="text-3xl font-medium mt-1">Gig Request</h2>
+            </div>
+            <!-- Commisioner-->
+            <div class="flex gap-2 items-center">
+                <svg class="fill-green" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M0 64C0 28.7 28.7 0 64 0H352c35.3 0 64 28.7 64 64V256c0 35.3-28.7 64-64 64H202.7l-81.1 60.8c-4.8 3.6-11.3 4.2-16.8 1.5s-8.8-8.2-8.8-14.3V320H64c-35.3 0-64-28.7-64-64V64zM256 352h96c53 0 96-43 96-96V128H576c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H544v48c0 6.1-3.4 11.6-8.8 14.3s-11.9 2.1-16.8-1.5L437.3 448H320c-35.3 0-64-28.7-64-64V352zM228 56c0-11-9-20-20-20s-20 9-20 20V70c-7.6 1.7-15.2 4.4-22.2 8.5c-13.9 8.3-25.9 22.8-25.8 43.9c.1 20.3 12 33.1 24.7 40.7c11 6.6 24.7 10.8 35.6 14l1.7 .5c12.6 3.8 21.8 6.8 28 10.7c5.1 3.2 5.8 5.4 5.9 8.2c.1 5-1.8 8-5.9 10.5c-5 3.1-12.9 5-21.4 4.7c-11.1-.4-21.5-3.9-35.1-8.5c-2.3-.8-4.7-1.6-7.2-2.4c-10.5-3.5-21.8 2.2-25.3 12.6s2.2 21.8 12.6 25.3c1.9 .6 4 1.3 6.1 2.1l0 0 0 0c8.3 2.9 17.9 6.2 28.2 8.4V264c0 11 9 20 20 20s20-9 20-20V250.2c8-1.7 16-4.5 23.2-9c14.3-8.9 25.1-24.1 24.8-45c-.3-20.3-11.7-33.4-24.6-41.6c-11.5-7.2-25.9-11.6-37.1-15l-.7-.2c-12.8-3.9-21.9-6.7-28.3-10.5c-5.2-3.1-5.3-4.9-5.3-6.7c0-3.7 1.4-6.5 6.2-9.3c5.4-3.2 13.6-5.1 21.5-5c9.6 .1 20.2 2.2 31.2 5.2c10.7 2.8 21.6-3.5 24.5-14.2s-3.5-21.6-14.2-24.5c-6.5-1.7-13.7-3.4-21.1-4.7V56z"/></svg>
+                <h4 class="text-xl mt-1 mb-2">Producer</h4>
+            </div>
+            <div id="commissioner" class="bg-dark-gray py-2 px-3 border border-gray rounded-xl">
+                <div class="flex gap-2 items-center">
+                    <img class="rounded-lg w-16" src="img/collector/DegenDictator.png" alt="A collector named DegenDictator" />
+                    <div class="flex flex-col">
+                        <h2 class="text-lg" id="displaydisplayName"></h2>
+                        <p class="text-sm font-bold uppercase text-light-gray py-1" id="displayRole"></p>
+                    </div>
+                </div>
+            </div>
+            <!-- Details Displayed from Gig-Details.html -->
+            <div class="flex flex-col gap-2">
+                <h3 class="text-2xl font-bold mt-3" id="displayTitle"></h3>
+                <p class="text-sm text-light-gray" id="displayDescription"></p>
+                <div class="grid grid-cols-2 mt-1">
+                    <div class="flex flex-col">
+                        <h4 class="text-lg mt-1 font-bold">Style</h4>
+                        <p class="text-sm text-light-gray" id="displayStyle"></p>
+                    </div>
+                    <div class="flex flex-col">
+                        <h4 class="text-lg mt-1 font-bold">Orientation</h4>
+                        <p class="text-sm text-light-gray" id="displayOrientation"></p>
+                    </div>
+                </div>    
+                <h4 class="text-lg mt-1 font-bold">Insipration</h4>
+                <div class="flex gap-2 bg-dark-gray py-1 px-1 border border-gray rounded-xl items-center">
+                    <img class="rounded-lg w-10" src="img/collector/DegenDictator.png" alt="A collector named DegenDictator" />
+                    <p class="text-sm" id="displayInspiration"></p>
+                </div>    
+                <div class="grid grid-cols-2 mt-1">
+                    <div class="flex flex-col">
+                        <h4 class="text-lg mt-1 font-bold">Budget</h4>
+                        <p class="text-sm text-light-gray" id="displayBudget"></p>
+                    </div>
+                    <div class="flex flex-col">
+                        <h4 class="text-lg mt-1 font-bold">Due Date</h4>
+                        <p class="text-sm text-light-gray" id="displayDue"></p>
+                    </div>
+                </div>
+            </div>
+            <section class="flex w-full gap-2 py-4">
+                <button type="button" onclick="history.back()" class="text-white bg-stone-900 w-full rounded border border-green hover:bg-gray focus:ring-4 focus:ring-green font-medium rounded-xl text-sm px-5 py-2.5 dark:bg-greenb dark:hover:bg-green focus:outline-none dark:focus:ring-blue-800">Decline</button>
+                <button type="button" onclick= "window.location.href='upload.html';" class="py-2.5 px-5 w-full text-sm font-medium text-black focus:outline-none bg-gradient-to-b from-green to-teal hover:bg-gradient-to-r from-green to-teal rounded-xl focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700">Accept</button>
+            </section>
+        </main>
+        <script>
+            // Function to extract query parameters from URL
+            function getQueryVariable(variable) {
+                const query = window.location.search.substring(1);
+                const vars = query.split("&");
+                for (let i = 0; i < vars.length; i++) {
+                    const pair = vars[i].split("=");
+                    if (pair[0] === variable) {
+                        return decodeURIComponent(pair[1]);
+                    }
+                }
+                return null;
+            }
+        
+            // Update content with form data from local storage
+            document.addEventListener('DOMContentLoaded', function() {
+                // Retrieve form data from local storage
+                var displayName = localStorage.getItem('displayName');
+                var role = localStorage.getItem('role');
+                var title = localStorage.getItem('title');
+                var description = localStorage.getItem('description');
+                var style = localStorage.getItem('style');
+                var orientation = localStorage.getItem('orientation');
+                var inspiration = localStorage.getItem('inspiration');
+                var budget = getQueryVariable('budget') || localStorage.getItem('budget') || '$100.00';
+                var due = getQueryVariable('due') || localStorage.getItem('due') || 'Jan 24 2024';
+
+                // Display form data in commissioner div
+                document.getElementById('displaydisplayName').innerText = getQueryVariable('display-name') || 'Degen Dictator';
+                document.getElementById('displayRole').innerText = getQueryVariable('role') || 'Collector';        
+                // Display other gig details
+                
+                document.getElementById('displayTitle').innerText = getQueryVariable('title') || 'Pixel Ape';
+                document.getElementById('displayDescription').innerText = getQueryVariable('description') || 'I just want a Pixel version of my Ape.';
+                document.getElementById('displayStyle').innerText = getQueryVariable('style') || 'Pixel Art';
+                document.getElementById('displayOrientation').innerText = getQueryVariable('orientation') || 'Square';
+                document.getElementById('displayInspiration').innerText = getQueryVariable('inspiration') || 'inspiration.png';
+                document.getElementById('displayBudget').innerText = getQueryVariable('budget') || '$100.00';
+                document.getElementById('displayDue').innerText = getQueryVariable('due') || 'Jan 24 2024';
+        
+                // Display the image on gig.html
+                const file = getQueryVariable('file');
+                if (file) {
+                    const displayImage = document.getElementById('displayImage');
+                    displayImage.src = URL.createObjectURL(file);
+                }
+            });
+        </script>
+    </body>
+</html>
